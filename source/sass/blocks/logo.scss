@@ -1,0 +1,11 @@
+.logo {
+  @include vp-tablet {
+    width: 110px;
+    height: 22px;
+  }
+
+  @include vp-desktop {
+    width: 130px;
+    height: 26px;
+  }
+}

@@ -1,0 +1,18 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin vp-tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin vp-desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
