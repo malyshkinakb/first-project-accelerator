@@ -1,0 +1,33 @@
+.contacts {
+  padding: 40px 0;
+  color: $main-color;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.contacts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 290px;
+  gap: 28px;
+}
+
+.contacts__item-title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.contacts__text {
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: $main-color;
+  margin: 0;
+}

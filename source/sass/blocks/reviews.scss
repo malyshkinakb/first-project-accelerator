@@ -1,0 +1,38 @@
+.reviews {
+  padding: 40px 0;
+}
+
+.reviews__title {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.reviews__slider {
+  padding: 0 25px;
+}
+
+.reviews__slide {
+  background-color: $main-color;
+  padding: 30px 25px;
+  color: $main-color-light;
+  text-align: center;
+}
+
+.reviews__image {
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.reviews__slide h3 {
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.reviews__slide p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+}

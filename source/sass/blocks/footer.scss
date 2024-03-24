@@ -1,0 +1,27 @@
+.footer {
+  background-color: #030a1a;
+  padding: 40px 0;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer__nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 35px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer__nav-link {
+  text-decoration: none;
+  color: $main-color-light;
+}
+

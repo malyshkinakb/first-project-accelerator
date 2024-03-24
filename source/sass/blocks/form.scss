@@ -1,0 +1,45 @@
+.form__form-block {
+  background-color: #102654;
+  padding: 70px 15px;
+  margin: 0 0 0 -15px;
+  width: 100vw;
+  max-width: 100vw;
+
+  @include vp-tablet {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.form__input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #74819c;
+  width: 100%;
+  padding-bottom: 4px;
+  height: 27px;
+}
+
+.form__input::placeholder {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #74819c;
+}
+
+.form__request {
+  display: grid;
+  grid-template-columns: 290px;
+  gap: 36px;
+}
+
+.form__button {
+  padding: 22px 0;
+  background-color: transparent;
+}

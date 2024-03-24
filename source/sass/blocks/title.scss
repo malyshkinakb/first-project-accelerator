@@ -1,0 +1,23 @@
+.title {
+  font-family: $alumni-sans;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+  color: $main-color;
+  text-align: center;
+
+  &--form {
+    text-align: left;
+    color: $main-color-light;
+  }
+
+  &--contacts {
+    text-align: left;
+  }
+
+  @include vp-tablet {
+    font-size: 42px;
+    line-height: 42px;
+    text-align: center;
+  }
+}

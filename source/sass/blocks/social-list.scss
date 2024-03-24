@@ -1,0 +1,42 @@
+.social-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-list__link {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: $main-color-light;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    display: block;
+    background-color: #030a1a;
+  }
+
+  &--vk::before {
+    mask: url("../../img/sprite/vk.svg");
+    mask-size: 12px 7px;
+    width: 12px;
+    height: 7px;
+  }
+
+  &--ok::before {
+    mask: url("../../img/sprite/odnoklassniki.svg");
+    mask-size: 9px 16px;
+    width: 9px;
+    height: 16px;
+  }
+
+  &--reddit::before {
+    mask: url("../../img/sprite/reddit.svg");
+    mask-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+  }
+}
