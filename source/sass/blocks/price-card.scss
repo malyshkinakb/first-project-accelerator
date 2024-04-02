@@ -1,0 +1,105 @@
+.price-card {
+  background-color: $main-color-light;
+  padding: 50px 47px;
+  text-align: center;
+
+  @include vp-tablet {
+    padding: 65px;
+    width: 380px;
+    margin: 0 auto;
+  }
+
+  @include vp-desktop {
+    width: 360px;
+    padding: 65px 78px;
+  }
+}
+
+.price-card__title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 18px;
+
+  @include vp-tablet {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 22px;
+  }
+
+  @include vp-desktop {
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 18px;
+  }
+}
+
+.price-card__number-training {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 87px;
+
+  @include vp-tablet {
+    margin-bottom: 82px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.price-card__cost {
+  display: block;
+  position: relative;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: #103aae;
+  width: 100%;
+  margin-bottom: 27px;
+  z-index: 2;
+
+  svg {
+    @include vp-tablet {
+      width: 30px;
+      height: 42px;
+    }
+  }
+
+  @include vp-tablet {
+    font-size: 60px;
+    margin-bottom: 22px;
+  }
+
+  @include vp-desktop {
+    margin-bottom: 18px;
+  }
+}
+
+.price-card__cost::before {
+  content: attr(data-price);
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  color: #e8e8e8;
+  opacity: 0.48;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 150px;
+  z-index: -1;
+
+  @include vp-tablet {
+    font-size: 100px;
+    bottom: 0;
+  }
+}
+
+.price-card__button {
+  display: block;
+  color: $main-color;
+  padding: 25px 0;
+  border: 2px solid #102654;
+}

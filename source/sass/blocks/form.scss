@@ -1,14 +1,9 @@
 .form__form-block {
   background-color: #102654;
-  padding: 70px 15px;
-  margin: 0 0 0 -15px;
-  width: 100vw;
-  max-width: 100vw;
+  padding: 70px 0;
 
   @include vp-tablet {
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
+    padding: 60px 0;
   }
 }
 
@@ -22,6 +17,7 @@
   border: none;
   border-bottom: 1px solid #74819c;
   width: 100%;
+  padding: 0;
   padding-bottom: 4px;
   height: 27px;
 }
@@ -37,9 +33,16 @@
   display: grid;
   grid-template-columns: 290px;
   gap: 36px;
+
+  @include vp-tablet {
+    padding: 0 119px;
+    grid-template-columns: repeat(2, 205px);
+    gap: 36px 30px;
+  }
 }
 
 .form__button {
-  padding: 22px 0;
-  background-color: transparent;
+  @include vp-tablet {
+    grid-column: 1/3;
+  }
 }

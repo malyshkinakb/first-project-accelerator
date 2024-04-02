@@ -12,7 +12,7 @@
     <link rel="preload" href="fonts/Roboto-Condensed-Regular.woff2" as="font" type="font/woff2">
   </head>
   <body class="page__body">
-    <main class="main-conntainer">
+    <main class="main-container">
       <h1 class="visually-hidden">Фитнес центр SUPERGYM</h1>
       <section class="hero" data-test="hero">
         <div class="container">
@@ -29,7 +29,7 @@
               </ul>
               <p class="hero__city">Омск</p>
               <h1 class="hero__title">Фитнес центр</h1>
-              <a class="hero__button button" href="#price">Купить абонемент</a>
+              <a class="hero__button button button--hero" href="#price">Купить абонемент</a>
             </div>
             <picture>
               <source type="image/webp" media="(min-width: 1366px)" srcset="img/hero-image-desktop.webp 1x, img/hero-image-desktop@2x.webp 2x">
@@ -41,11 +41,14 @@
         </div>
       </section>
       <section class="about" data-test="about">
-        <div class="container">
-          <h2 class="about__title title">Тренажёрный зал</h2>
-          <span class="about__text">Просторный зал площадью 900 кв/м</span>
-          <p>Supergym - самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
-          <div class="about__media-block">
+        <div class="about__wrapper container">
+          <div class="about__description">
+            <h2 class="about__title title title--about">Тренажёрный зал</h2>
+            <span class="about__text">Просторный зал площадью 900 кв/м</span>
+            <p>Supergym - самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+            <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+          </div>
+            <div class="about__media-block">
             <picture>
               <source type="image/webp" media="(min-width: 1366px)" srcset="img/gym-image-desktop.webp 1x, img/gym-image-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/gym-image-tablet@1x.webp 1x, img/gym-image-tablet@2x.webp 2x">
@@ -110,7 +113,7 @@
         </div>
       </section>
       <section class="games" data-test="games">
-        <div class="container">
+        <div class="games__wrapper container">
           <h2 class="visually-hidden">Соревнования по CrossFit</h2>
           <div class="games__text">
             <p class="games__name">SUPER GAMES</p>
@@ -127,7 +130,7 @@
               </div>
             </div>
             <p class="games__description">Ежегодные соревнования по CrossFit</p>
-            <a class="games__button button" href="#">заполнить заявку</a>
+            <a class="games__button button button--games" href="#">заполнить заявку</a>
           </div>
           <picture>
             <source type="image/webp" media="(min-width: 1366px)" srcset="img/games-image-desktop.webp 1x, img/games-image-desktop@2x.webp 2x">
@@ -141,25 +144,153 @@
       </section>
       <section class="juri" data-test="juri">
         <div class="container">
-          <h2 class="juri__title title">Жюри</h2>
-          <div class="juri__slider">
-            <div class="juri__slide">
-              <div class="juri__card card-juri">
-                <picture>
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/juri/juri1-image-tablet@1x.webp 1x, img/juri/juri1-image-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/juri/juri1-image-phone@1x.webp 1x, img/juri/juri1-image-phone@2x.webp 2x">
-                  <source media="(min-width:768px)" srcset="img/juri/juri1-image-tablet@1x.jpg 1x, img/juri/juri1-image-tablet@2x.jpg 2x" width="260" height="300">
-                  <img class="juri__image" src="img/juri/juri1-image-mobile@1x.jpg 1x" srcset="img/juri/juri1-image-mobile@2x.jpg 2x" alt="Член жюри." width="227" height="280">
-                </picture>
-                <div class="juri__card-text card-text">
-                  <p class="card-text__name">Александр Пашков</p>
-                  <div class="card-text__description">
-                    <p class="card-text__sport">CrossFit</p>
-                    <ul class="card-text__list">
-                      <li class="card-text__item">Certified Level 3 Trainer</li>
-                      <li class="card-text__item">Победитель чемпионата России по CrossFit </li>
-                      <li class="card-text__item">Опыт — 6 лет</li>
-                    </ul>
+          <h2 class="juri__title title title--juri">Жюри</h2>
+          <div class="juri__slider swiper">
+            <div class="swiper-wrapper">
+              <div class="juri__slide swiper-slide">
+                <div class="juri__card card-juri">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/juri/juri1-image-tablet@1x.webp 1x, img/juri/juri1-image-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/juri/juri1-image-phone@1x.webp 1x, img/juri/juri1-image-phone@2x.webp 2x">
+                    <source media="(min-width:768px)" srcset="img/juri/juri1-image-tablet@1x.jpg 1x, img/juri/juri1-image-tablet@2x.jpg 2x" width="260" height="300">
+                    <img class="juri__image" src="img/juri/juri1-image-mobile@1x.jpg 1x" srcset="img/juri/juri1-image-mobile@2x.jpg 2x" alt="Член жюри." width="227" height="280">
+                  </picture>
+                  <div class="juri__card-text card-text">
+                    <p class="card-text__name">Александр Пашков</p>
+                    <div class="card-text__description">
+                      <p class="card-text__sport">CrossFit</p>
+                      <ul class="card-text__list">
+                        <li class="card-text__item">Certified Level 3 Trainer</li>
+                        <li class="card-text__item">Победитель чемпионата России по CrossFit </li>
+                        <li class="card-text__item">Опыт — 6 лет</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="juri__slide swiper__slide">
+                <div class="juri__card card-juri">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/juri/juri1-image-tablet@1x.webp 1x, img/juri/juri1-image-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/juri/juri1-image-phone@1x.webp 1x, img/juri/juri1-image-phone@2x.webp 2x">
+                    <source media="(min-width:768px)" srcset="img/juri/juri1-image-tablet@1x.jpg 1x, img/juri/juri1-image-tablet@2x.jpg 2x" width="260" height="300">
+                    <img class="juri__image" src="img/juri/juri1-image-mobile@1x.jpg 1x" srcset="img/juri/juri1-image-mobile@2x.jpg 2x" alt="Член жюри." width="227" height="280">
+                  </picture>
+                  <div class="juri__card-text card-text">
+                    <p class="card-text__name">Александр Пашков</p>
+                    <div class="card-text__description">
+                      <p class="card-text__sport">CrossFit</p>
+                      <ul class="card-text__list">
+                        <li class="card-text__item">Certified Level 3 Trainer</li>
+                        <li class="card-text__item">Победитель чемпионата России по CrossFit </li>
+                        <li class="card-text__item">Опыт — 6 лет</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="juri__slide swiper__slide">
+                <div class="juri__card card-juri">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/juri/juri1-image-tablet@1x.webp 1x, img/juri/juri1-image-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/juri/juri1-image-phone@1x.webp 1x, img/juri/juri1-image-phone@2x.webp 2x">
+                    <source media="(min-width:768px)" srcset="img/juri/juri1-image-tablet@1x.jpg 1x, img/juri/juri1-image-tablet@2x.jpg 2x" width="260" height="300">
+                    <img class="juri__image" src="img/juri/juri1-image-mobile@1x.jpg 1x" srcset="img/juri/juri1-image-mobile@2x.jpg 2x" alt="Член жюри." width="227" height="280">
+                  </picture>
+                  <div class="juri__card-text card-text">
+                    <p class="card-text__name">Александр Пашков</p>
+                    <div class="card-text__description">
+                      <p class="card-text__sport">CrossFit</p>
+                      <ul class="card-text__list">
+                        <li class="card-text__item">Certified Level 3 Trainer</li>
+                        <li class="card-text__item">Победитель чемпионата России по CrossFit </li>
+                        <li class="card-text__item">Опыт — 6 лет</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="juri__slide swiper__slide">
+                <div class="juri__card card-juri">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/juri/juri1-image-tablet@1x.webp 1x, img/juri/juri1-image-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/juri/juri1-image-phone@1x.webp 1x, img/juri/juri1-image-phone@2x.webp 2x">
+                    <source media="(min-width:768px)" srcset="img/juri/juri1-image-tablet@1x.jpg 1x, img/juri/juri1-image-tablet@2x.jpg 2x" width="260" height="300">
+                    <img class="juri__image" src="img/juri/juri1-image-mobile@1x.jpg 1x" srcset="img/juri/juri1-image-mobile@2x.jpg 2x" alt="Член жюри." width="227" height="280">
+                  </picture>
+                  <div class="juri__card-text card-text">
+                    <p class="card-text__name">Александр Пашков</p>
+                    <div class="card-text__description">
+                      <p class="card-text__sport">CrossFit</p>
+                      <ul class="card-text__list">
+                        <li class="card-text__item">Certified Level 3 Trainer</li>
+                        <li class="card-text__item">Победитель чемпионата России по CrossFit </li>
+                        <li class="card-text__item">Опыт — 6 лет</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="juri__slide swiper__slide">
+                <div class="juri__card card-juri">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/juri/juri1-image-tablet@1x.webp 1x, img/juri/juri1-image-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/juri/juri1-image-phone@1x.webp 1x, img/juri/juri1-image-phone@2x.webp 2x">
+                    <source media="(min-width:768px)" srcset="img/juri/juri1-image-tablet@1x.jpg 1x, img/juri/juri1-image-tablet@2x.jpg 2x" width="260" height="300">
+                    <img class="juri__image" src="img/juri/juri1-image-mobile@1x.jpg 1x" srcset="img/juri/juri1-image-mobile@2x.jpg 2x" alt="Член жюри." width="227" height="280">
+                  </picture>
+                  <div class="juri__card-text card-text">
+                    <p class="card-text__name">Александр Пашков</p>
+                    <div class="card-text__description">
+                      <p class="card-text__sport">CrossFit</p>
+                      <ul class="card-text__list">
+                        <li class="card-text__item">Certified Level 3 Trainer</li>
+                        <li class="card-text__item">Победитель чемпионата России по CrossFit </li>
+                        <li class="card-text__item">Опыт — 6 лет</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="juri__slide swiper__slide">
+                <div class="juri__card card-juri">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/juri/juri1-image-tablet@1x.webp 1x, img/juri/juri1-image-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/juri/juri1-image-phone@1x.webp 1x, img/juri/juri1-image-phone@2x.webp 2x">
+                    <source media="(min-width:768px)" srcset="img/juri/juri1-image-tablet@1x.jpg 1x, img/juri/juri1-image-tablet@2x.jpg 2x" width="260" height="300">
+                    <img class="juri__image" src="img/juri/juri1-image-mobile@1x.jpg 1x" srcset="img/juri/juri1-image-mobile@2x.jpg 2x" alt="Член жюри." width="227" height="280">
+                  </picture>
+                  <div class="juri__card-text card-text">
+                    <p class="card-text__name">Александр Пашков</p>
+                    <div class="card-text__description">
+                      <p class="card-text__sport">CrossFit</p>
+                      <ul class="card-text__list">
+                        <li class="card-text__item">Certified Level 3 Trainer</li>
+                        <li class="card-text__item">Победитель чемпионата России по CrossFit </li>
+                        <li class="card-text__item">Опыт — 6 лет</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="juri__slide swiper__slide">
+                <div class="juri__card card-juri">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/juri/juri1-image-tablet@1x.webp 1x, img/juri/juri1-image-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/juri/juri1-image-phone@1x.webp 1x, img/juri/juri1-image-phone@2x.webp 2x">
+                    <source media="(min-width:768px)" srcset="img/juri/juri1-image-tablet@1x.jpg 1x, img/juri/juri1-image-tablet@2x.jpg 2x" width="260" height="300">
+                    <img class="juri__image" src="img/juri/juri1-image-mobile@1x.jpg 1x" srcset="img/juri/juri1-image-mobile@2x.jpg 2x" alt="Член жюри." width="227" height="280">
+                  </picture>
+                  <div class="juri__card-text card-text">
+                    <p class="card-text__name">Александр Пашков</p>
+                    <div class="card-text__description">
+                      <p class="card-text__sport">CrossFit</p>
+                      <ul class="card-text__list">
+                        <li class="card-text__item">Certified Level 3 Trainer</li>
+                        <li class="card-text__item">Победитель чемпионата России по CrossFit </li>
+                        <li class="card-text__item">Опыт — 6 лет</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -227,11 +358,11 @@
         <div class="container">
           <h2 class="offers__title title">Акции</h2>
           <div class="offers__main-item main-offer">
-            <div>
+            <div class="main-offer__description">
               <span>Год</span>
               <strong>4999</strong>
               <p>Безлимитный абонемент<br>в тренажёрный зал</p>
-              <a class="main-offer__button" href="#">подробнее</a>
+              <a class="offers__button offers__button--main" href="#">подробнее</a>
             </div>
             <picture>
               <source type="image/webp" media="(min-width: 1366px)" srcset="img/offer-image-desktop.webp 1x, img/offer-image-desktop@2x.webp 2x">
@@ -244,13 +375,17 @@
           </div>
           <ul class="offers__list">
             <li class="offers__item">
-              <h3>Месяц бесплатно</h3>
-              <p>Приведи друга, получи абонемент<br>в подарок</p>
+              <div>
+                <h3>Месяц бесплатно</h3>
+                <p>Приведи друга, получи абонемент<br>в подарок</p>
+              </div>
               <a class="offers__button" href="#">подробнее</a>
             </li>
             <li class="offers__item">
-              <h3>Скидка 20%</h3>
-              <p>Корпоративный фитнес с командой</p>
+              <div>
+                <h3>Скидка 20%</h3>
+                 <p>Корпоративный фитнес с командой</p>
+                </div>
               <a class="offers__button" href="#">подробнее</a>
             </li>
           </ul>
@@ -260,16 +395,16 @@
         <div class="container">
           <h2 class="faq__title title">Вопросы и ответы</h2>
           <div class="faq__tabs">
-            <button class="faq__tab">Центр</button>
-            <button class="faq__tab">Абонемент</button>
-            <button class="faq__tab">Услуги</button>
-            <button class="faq__tab">Правила</button>
+            <button class="faq__tab" data-button="center">Центр</button>
+            <button class="faq__tab" data-button="abonement">Абонемент</button>
+            <button class="faq__tab" data-button="services">Услуги</button>
+            <button class="faq__tab" data-button="rules">Правила</button>
           </div>
           <div class="faq__body">
-            <ul class="faq__body-list" id="tabs-centr">
+            <ul class="faq__body-list is-open" id="center" data-content="center">
               <li class="faq__body-item faq-question">
                 <div class="faq-question__title">
-                  <h3>Как стать членом<br>фитнес-центра?</h3>
+                  <h3>Как стать членом фитнес-центра?</h3>
                   <button class="faq-question__button active-button" type="button" aria-label="Открыть"></button>
                 </div>
                 <div class="faq-question__body active-block">
@@ -307,29 +442,183 @@
                 </div>
               </li>
             </ul>
+            <ul class="faq__body-list" data-content="q" id="abonement" data-content="abonement">
+              <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Занятия с тренером входят в абонемент?</h3>
+                  <button class="faq-question__button active-button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body active-block">
+                  <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,  получить небольшую консультацию по тренажеру или технике выполнения упражнения.
+                  </p>
+                </div>
+              </li>
+             <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Можно ли заморозить абонемент?</h3>
+                  <button class="faq-question__button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                </div>
+              </li>
+              <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
+                  <button class="faq-question__button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Что такое семейный доступ и доступ для друзей?</h3>
+                  <button class="faq-question__button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <ul class="faq__body-list" id="services" data-content="services">
+              <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
+                  <button class="faq-question__button active-button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body active-block">
+                  <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.
+                  </p>
+                </div>
+              </li>
+             <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
+                  <button class="faq-question__button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                </div>
+              </li>
+              <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Можно ли приобрести в центре спортивное питание?</h3>
+                  <button class="faq-question__button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Есть ли в центре детская комната?</h3>
+                  <button class="faq-question__button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <ul class="faq__body-list" id="rules" data-content="rules">
+              <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Есть в фитнес-центре дресс-код?</h3>
+                  <button class="faq-question__button active-button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body active-block">
+                  <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).
+                  </p>
+                </div>
+              </li>
+             <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Можно ли приводить с собой детей на тренировки?</h3>
+                  <button class="faq-question__button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                </div>
+              </li>
+              <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Какие дополнительные правила посещения центра?</h3>
+                  <button class="faq-question__button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.
+                  </p>
+                </div>
+              </li>
+              <li class="faq__body-item faq-question">
+                <div class="faq-question__title">
+                  <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
+                  <button class="faq-question__button" type="button" aria-label="Открыть"></button>
+                </div>
+                <div class="faq-question__body">
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
        </section>
       <section class="reviews" data-test="reviews">
         <div class="container">
-          <h2 class="reviews__title title">Отзывы</h2>
-          <div class="reviews__slider">
-            <div class="reviews__slide">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews1--tablet@1x.webp 1x, img/reviews1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/reviews1-phone@1x.webp 1x, img/reviews1-phone@2x.webp 2x">
-                <source media="(min-width:768px)" srcset="img/offer-tablet@1x.jpg 1x, img/reviews1-tablet@2x.jpg 2x">
-                <img class="reviews__image" src="img/reviews1-phone@1x.jpg 1x" srcset="img/reviews1-phone@2x.jpg 2x" alt="Отзыв Анны Орловой." width="68" height="68">
-              </picture>
-              <h3>Анна Орлова</h3>
-              <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+          <h2 class="reviews__title title title--reviews">Отзывы</h2>
+          <div class="reviews__slider swiper">
+            <div class="reviews__wrapper swiper-wrapper">
+              <div class="reviews__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews1--tablet@1x.webp 1x, img/reviews1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/reviews1-phone@1x.webp 1x, img/reviews1-phone@2x.webp 2x">
+                  <source media="(min-width:768px)" srcset="img/reviews1-tablet@1x.jpg 1x, img/reviews1-tablet@2x.jpg 2x">
+                  <img class="reviews__image" src="img/reviews1-phone@1x.jpg 1x" srcset="img/reviews1-phone@2x.jpg 2x" alt="Отзыв Анны Орловой." width="68" height="68">
+                </picture>
+                <div class="reviews__text">
+                  <h3>Анна Орлова</h3>
+                  <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                </div>
+              </div>
+              <div class="reviews__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews1--tablet@1x.webp 1x, img/reviews1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/reviews1-phone@1x.webp 1x, img/reviews1-phone@2x.webp 2x">
+                  <source media="(min-width:768px)" srcset="img/reviews1-tablet@1x.jpg 1x, img/reviews1-tablet@2x.jpg 2x">
+                  <img class="reviews__image" src="img/reviews1-phone@1x.jpg 1x" srcset="img/reviews1-phone@2x.jpg 2x" alt="Отзыв Анны Орловой." width="68" height="68">
+                </picture>
+                <div class="reviews__text">
+                  <h3>Анна Орлова</h3>
+                  <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                </div>
+              </div>
+              <div class="reviews__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/reviews1--tablet@1x.webp 1x, img/reviews1-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/reviews1-phone@1x.webp 1x, img/reviews1-phone@2x.webp 2x">
+                  <source media="(min-width:768px)" srcset="img/reviews1-tablet@1x.jpg 1x, img/reviews1-tablet@2x.jpg 2x">
+                  <img class="reviews__image" src="img/reviews1-phone@1x.jpg 1x" srcset="img/reviews1-phone@2x.jpg 2x" alt="Отзыв Анны Орловой." width="68" height="68">
+                </picture>
+                <div class="reviews__text">
+                  <h3>Анна Орлова</h3>
+                  <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                </div>
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
       <section class="form" data-test="form">
-        <div class="container">
-          <div class="form__form-block">
+        <div class="form__form-block">
+          <div class="container">
             <h2 class="form__title title title--form">Бесплатное занятие</h2>
             <form class="form__request" action="https://echo.htmlacademy.ru/">
               <label class="form__label">
@@ -338,10 +627,12 @@
               <label class="form__label">
                 <input class="form__input" type="tel" name="tel" placeholder="Телефон" required>
               </label>
-              <button class="form__button button" type="submit">отправить</button>
+              <button class="form__button button button--form" type="submit">отправить</button>
             </form>
           </div>
-          <div class="form__contacts contacts">
+        </div>
+        <div class="form__contacts contacts">
+          <div class="container">
             <h2 class="contacts__title title title--contacts">Контакты</h2>
             <ul class="contacts__list">
               <li class="contacts__item">
@@ -361,6 +652,7 @@
                 <a class="contacts__text" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
               </li>
             </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -403,6 +695,7 @@
         </ul>
       </div>
     </footer>
+    <script type="module" src="js/vendor.js" defer></script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

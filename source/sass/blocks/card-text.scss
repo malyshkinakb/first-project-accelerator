@@ -15,7 +15,7 @@
   }
 
   .card-text__description {
-    display: block;
+    opacity: 1;
   }
 }
 
@@ -25,10 +25,14 @@
   font-size: 22px;
   line-height: 22px;
   text-align: center;
+
+  @include vp-tablet {
+    margin-top: 253px;
+  }
 }
 
 .card-text__description {
-  display: none;
+  opacity: 0;
 }
 
 .card-text__list {

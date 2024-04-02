@@ -1,12 +1,21 @@
 .footer {
   background-color: #030a1a;
   padding: 40px 0;
+
+  @include vp-tablet {
+    padding: 45px 0;
+  }
 }
 
 .footer__wrapper {
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @include vp-tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .footer__nav-list {
@@ -18,6 +27,10 @@
   gap: 20px 35px;
   font-size: 14px;
   line-height: 20px;
+
+  @include vp-tablet {
+    gap: 10px 30px;
+  }
 }
 
 .footer__nav-link {

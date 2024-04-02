@@ -7,4 +7,29 @@
   color: #ffffff;
   border: 2px solid #ffffff;
   text-align: center;
+
+  &--hero {
+    padding: 22px 0;
+
+    @include vp-tablet {
+      padding: 25px 0;
+    }
+  }
+
+  &--games {
+    padding: 22px 50px;
+
+    @include vp-tablet {
+      padding: 25px 50px;
+    }
+  }
+
+  &--form {
+    padding: 22px 0;
+    background-color: transparent;
+
+    @include vp-tablet {
+      padding: 25px 56px;
+    }
+  }
 }

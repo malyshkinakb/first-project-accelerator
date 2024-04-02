@@ -6,18 +6,55 @@
   color: $main-color;
   text-align: center;
 
-  &--form {
-    text-align: left;
-    color: $main-color-light;
-  }
-
-  &--contacts {
-    text-align: left;
-  }
-
   @include vp-tablet {
     font-size: 42px;
     line-height: 42px;
     text-align: center;
+  }
+
+  @include vp-desktop {
+    font-size: 54px;
+    line-height: 54px;
+  }
+
+  &--about {
+    @include vp-desktop {
+      text-align: left;
+    }
+  }
+
+  &--form {
+    text-align: left;
+    color: $main-color-light;
+
+    @include vp-tablet {
+      font-size: 54px;
+      line-height: 54px;
+      text-align: center;
+    }
+  }
+
+  &--contacts {
+    text-align: left;
+
+    @include vp-tablet {
+      font-size: 54px;
+      line-height: 54px;
+      text-align: center;
+    }
+  }
+
+  &--juri,
+  &--reviews {
+    @include vp-tablet {
+      font-size: 54px;
+      line-height: 54px;
+    }
+  }
+
+  &--juri {
+    @include vp-desktop {
+      text-align: left;
+    }
   }
 }

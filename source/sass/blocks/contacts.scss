@@ -1,11 +1,19 @@
 .contacts {
   padding: 40px 0;
   color: $main-color;
+
+  @include vp-tablet {
+    padding: 60px 0;
+  }
 }
 
 .contacts__title {
   margin: 0;
   margin-bottom: 34px;
+
+  @include vp-tablet {
+    margin-bottom: 36px;
+  }
 }
 
 .contacts__list {
@@ -15,13 +23,43 @@
   display: grid;
   grid-template-columns: 290px;
   gap: 28px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #74819c;
+  }
+
+  @include vp-tablet {
+    padding: 0 119px;
+    grid-template-columns: repeat(2, 190px);
+    gap: 15px 60px;
+  }
+}
+
+.contacts__item:nth-of-type(2) {
+  @include vp-tablet {
+    grid-row: 2/3;
+  }
 }
 
 .contacts__item-title {
   margin: 0;
   font-size: 20px;
   line-height: 20px;
+  font-weight: 400;
   margin-bottom: 12px;
+
+  @include vp-tablet {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
 }
 
 .contacts__text {
@@ -30,4 +68,9 @@
   text-decoration: none;
   color: $main-color;
   margin: 0;
+
+  @include vp-tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

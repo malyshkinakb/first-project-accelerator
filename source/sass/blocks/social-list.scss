@@ -4,6 +4,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  @include vp-tablet {
+    flex-direction: row;
+    gap: 15px;
+  }
 }
 
 .social-list__link {

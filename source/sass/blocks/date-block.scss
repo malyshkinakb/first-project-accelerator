@@ -1,0 +1,50 @@
+.date-block__name {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  padding-bottom: 1px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid $main-color-light;
+
+  @include vp-tablet {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include vp-desktop {
+    padding-bottom: 3px;
+    margin-bottom: 6px;
+  }
+}
+
+.date-block__number {
+  display: flex;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+
+  @include vp-tablet {
+    align-items: center;
+    gap: 3px;
+  }
+
+  @include vp-desktop {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.date-block__text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  margin-left: 3px;
+
+  @include vp-tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
