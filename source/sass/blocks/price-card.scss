@@ -47,6 +47,10 @@
     font-size: 16px;
     line-height: 24px;
   }
+
+  @include vp-desktop {
+    margin-bottom: 78px;
+  }
 }
 
 .price-card__cost {

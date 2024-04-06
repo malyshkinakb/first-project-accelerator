@@ -12,6 +12,10 @@
     padding: 22px 0;
 
     @include vp-tablet {
+      padding: 20px 0;
+    }
+
+    @include vp-desktop {
       padding: 25px 0;
     }
   }

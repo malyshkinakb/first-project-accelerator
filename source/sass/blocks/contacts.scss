@@ -1,5 +1,5 @@
 .contacts {
-  padding: 40px 0;
+  padding: 36px 0 40px;
   color: $main-color;
 
   @include vp-tablet {
@@ -9,7 +9,7 @@
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 
   @include vp-tablet {
     margin-bottom: 36px;
@@ -26,19 +26,27 @@
   position: relative;
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1px;
-    height: 100%;
-    background-color: #74819c;
+    @include vp-tablet {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 100%;
+      background-color: #74819c;
+    }
   }
 
   @include vp-tablet {
     padding: 0 119px;
     grid-template-columns: repeat(2, 190px);
     gap: 15px 60px;
+  }
+
+  @include vp-desktop {
+    padding: 0;
+    grid-template-columns: repeat(2, 179px);
+    gap: 15px 120px;
   }
 }
 

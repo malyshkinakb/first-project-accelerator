@@ -7,9 +7,7 @@ import { initSliderJuri } from './modules/slider-juri';
 import { initAcordion } from './modules/accordion';
 import { initTabs } from './modules/tabs-faq';
 import { initTabsPrice } from './modules/tabs-price';
-
-//import {initSliderReviews} from './modules/slider-reviews';
-
+import { initVideo } from './modules/video';
 
 window.addEventListener('DOMContentLoaded', () => {
   initSliderReviews();
@@ -17,4 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initAcordion();
   initTabs();
   initTabsPrice();
+  initVideo();
 });
+

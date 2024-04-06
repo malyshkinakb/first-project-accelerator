@@ -28,8 +28,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  position: relative;
   margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgba(120, 120, 120, 0.2);
+  }
 
   @include vp-tablet {
     width: 310px;
@@ -54,21 +63,21 @@
   padding: 0 0 16px;
   cursor: pointer;
 
+  .is-active {
+    opacity: 1;
+    border-bottom: 2px solid $accent-color;
+  }
+
   @include vp-tablet {
     font-size: 18px;
     line-height: 18px;
-    padding: 0 0 4px;
+    padding: 0 0 8px;
   }
 
   @include vp-desktop {
     font-size: 20px;
     line-height: 20px;
   }
-}
-
-.is-active {
-  opacity: 1;
-  border-bottom: 2px solid $accent-color;
 }
 
 .price__list {

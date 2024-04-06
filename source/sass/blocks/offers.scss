@@ -4,6 +4,17 @@
   @include vp-tablet {
     padding: 60px 0;
   }
+
+  @include vp-desktop {
+    padding: 100px 0;
+  }
+}
+
+.offers__wrapper {
+  @include vp-desktop {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 .offers__title {
@@ -12,6 +23,10 @@
 
   @include vp-tablet {
     margin-bottom: 35px;
+  }
+
+  @include vp-desktop {
+    margin-bottom: 70px;
   }
 }
 
@@ -25,6 +40,10 @@
 
   @include vp-tablet {
     flex-direction: row;
+  }
+
+  @include vp-desktop {
+    flex-direction: column;
   }
 }
 
@@ -42,6 +61,10 @@
   @include vp-tablet {
     width: 324px;
     text-align: left;
+  }
+
+  @include vp-desktop {
+    width: 560px;
   }
 }
 
@@ -70,6 +93,10 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+
+  @include vp-desktop {
+    margin-bottom: 40px;
   }
 }
 

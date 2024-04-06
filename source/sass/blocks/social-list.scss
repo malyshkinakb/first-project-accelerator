@@ -9,10 +9,16 @@
     flex-direction: row;
     gap: 15px;
   }
+
+  @include vp-tablet {
+    gap: 10px;
+  }
 }
 
 .social-list__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 25px;
   height: 25px;
   background-color: $main-color-light;
@@ -25,21 +31,21 @@
   }
 
   &--vk::before {
-    mask: url("../../img/sprite/vk.svg");
+    mask-image: url("/__spritemap#sprite-vk-view");
     mask-size: 12px 7px;
     width: 12px;
     height: 7px;
   }
 
   &--ok::before {
-    mask: url("../../img/sprite/odnoklassniki.svg");
+    mask-image: url("/__spritemap#sprite-odnoklassniki-view");
     mask-size: 9px 16px;
     width: 9px;
     height: 16px;
   }
 
   &--reddit::before {
-    mask: url("../../img/sprite/reddit.svg");
+    mask-image: url("/__spritemap#sprite-reddit-view");
     mask-size: 14px 14px;
     width: 14px;
     height: 14px;

@@ -2,16 +2,30 @@ import {Swiper} from '../vendor/swiper';
 
 const initSliderJuri = () => {
   const swiper = new Swiper('.juri__slider', {
+  // Optional parameters
     direction: 'horizontal',
-    autoHeight: true,
     slidesPerView: 1,
-    spaceBetween: 0,
-    loop: false,
+
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-prev',
-      prevEl: '.swiper-button-next',
+      nextEl: '.juri__button--prev',
+      prevEl: '.juri__button--next',
     },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        initialSlide: 2,
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      1366: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      }
+    }
   });
 };
 

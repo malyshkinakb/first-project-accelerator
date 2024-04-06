@@ -1,8 +1,6 @@
-// Vendor
-// ---------------------------------
-
+/* vendor */
 @import "vendor/normalize";
-@import "./vendor/swiper";
+@import "vendor/swiper";
 
 /* базовые стили */
 @import "./global/variables";
@@ -14,7 +12,6 @@
 /* Блоки компонентов */
 @import "./blocks/about";
 @import "./blocks/button";
-@import "./blocks/card-text";
 @import "./blocks/contacts";
 @import "./blocks/date-block";
 @import "./blocks/faq";
@@ -29,6 +26,7 @@
 @import "./blocks/price";
 @import "./blocks/price-card";
 @import "./blocks/reviews";
+@import "./blocks/slide-juri";
 @import "./blocks/social-list";
 @import "./blocks/title";
 @import "./blocks/juri";

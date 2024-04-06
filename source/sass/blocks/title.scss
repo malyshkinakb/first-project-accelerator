@@ -18,6 +18,18 @@
   }
 
   &--about {
+    text-align: left;
+
+    @include vp-tablet {
+      text-align: center;
+    }
+
+    @include vp-desktop {
+      text-align: left;
+    }
+  }
+
+  &--faq {
     @include vp-desktop {
       text-align: left;
     }
@@ -32,6 +44,10 @@
       line-height: 54px;
       text-align: center;
     }
+
+    @include vp-desktop {
+      text-align: left;
+    }
   }
 
   &--contacts {
@@ -41,6 +57,10 @@
       font-size: 54px;
       line-height: 54px;
       text-align: center;
+    }
+
+    @include vp-desktop {
+      text-align: left;
     }
   }
 

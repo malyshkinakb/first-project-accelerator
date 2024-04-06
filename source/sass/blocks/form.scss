@@ -1,9 +1,38 @@
+.form {
+  @include vp-desktop {
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+.form__wrapper {
+  margin: auto;
+  min-width: 320px;
+  width: 320px;
+  padding: 0 15px;
+
+  @include vp-tablet {
+    width: 768px;
+    padding: 0 45px;
+  }
+
+  @include vp-desktop {
+    width: 683px;
+    padding: 0 103px;
+    margin-right: 0;
+  }
+}
+
 .form__form-block {
   background-color: #102654;
   padding: 70px 0;
 
   @include vp-tablet {
     padding: 60px 0;
+  }
+
+  @include vp-desktop {
+    width: 50%;
   }
 }
 
@@ -38,6 +67,11 @@
     padding: 0 119px;
     grid-template-columns: repeat(2, 205px);
     gap: 36px 30px;
+  }
+
+  @include vp-desktop {
+    padding: 0;
+    grid-template-columns: repeat(2, 223px);
   }
 }
 

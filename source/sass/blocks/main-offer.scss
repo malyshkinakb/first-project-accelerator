@@ -10,6 +10,10 @@
     display: flex;
     margin-bottom: 35px;
   }
+
+  @include vp-desktop {
+    margin-bottom: 0;
+  }
 }
 
 .main-offer__description {
@@ -26,12 +30,22 @@
     text-align: left;
     padding: 40px 25px;
   }
+
+  @include vp-desktop {
+    width: 280px;
+    padding: 40px 45px;
+  }
 }
 
 .main-offer__image {
   @include vp-tablet {
     width: 400px;
     height: 462px;
+  }
+
+  @include vp-desktop {
+    width: 280px;
+    height: 460px;
   }
 }
 

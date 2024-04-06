@@ -4,6 +4,10 @@
   @include vp-tablet {
     padding: 60px 0;
   }
+
+  @include vp-desktop {
+    padding: 100px 0;
+  }
 }
 
 .reviews__title {
@@ -13,10 +17,22 @@
   @include vp-tablet {
     margin-bottom: 35px;
   }
+
+  @include vp-desktop {
+    margin-bottom: 75px;
+  }
 }
 
 .reviews__slider {
   width: 240px;
+
+  @include vp-tablet {
+    width: 500px;
+  }
+
+  @include vp-desktop {
+    width: 560px;
+  }
 }
 
 .reviews__slide {
@@ -24,21 +40,30 @@
   padding: 30px 25px;
   color: $main-color-light;
   text-align: center;
-  //width: 240px;
+  width: 240px;
 
   @include vp-tablet {
-    //width: 500px;
+    width: 500px;
     padding: 40px 30px;
     display: flex;
     gap: 40px;
     text-align: left;
     margin: 0 auto;
   }
+
+  @include vp-desktop {
+    padding: 60px;
+    gap: 30px;
+  }
 }
 
 .reviews__text {
   @include vp-tablet {
     width: 320px;
+  }
+
+  @include vp-desktop {
+    width: 328px;
   }
 }
 

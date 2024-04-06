@@ -1,5 +1,6 @@
 .juri {
   padding: 40px 0;
+  position: relative;
 
   @include vp-tablet {
     padding: 30px 0 60px;
@@ -19,22 +20,52 @@
   }
 }
 
-.juri__card {
-  position: relative;
-}
+.juri__slider {
+  width: 227px;
 
-.juri__image {
-  margin: 0 auto;
+  z-index: 1;
 
   @include vp-tablet {
-    width: 260px;
-    height: 300px;
+    width: 560px;
+  }
+
+  @include vp-desktop {
+    width: 1160px;
   }
 }
 
-.juri__card-text {
+.juri__button {
+  width: 16px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: var(--swiper-navigation-top-offset, 50%);
+
+
+  &::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 32px;
+    mask: url("../../img/sprite/arrow.svg");
+    mask-size: 16px 32px;
+    background-color: $main-color;
+  }
+
+  &--prev {
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  &--next {
+    right: 45px;
+  }
+}
+
+.button-slider {
+
 }

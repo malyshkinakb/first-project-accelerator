@@ -37,6 +37,7 @@
   @include vp-desktop {
     grid-template-columns: repeat(3, 360px);
     grid-auto-flow: dense;
+    gap: 80px 40px;
   }
 }
 
@@ -45,6 +46,11 @@
     display: flex;
     gap: 14px;
     text-align: left;
+  }
+
+  @include vp-desktop {
+    gap: 0;
+    justify-content: space-between;
   }
 
   &:nth-of-type(3) {
@@ -108,6 +114,11 @@
   @include vp-tablet {
     padding: 0;
   }
+
+  @include vp-desktop {
+    width: 211px;
+    min-width: 110px;
+  }
 }
 
 .features__item-text h3 {
@@ -118,6 +129,12 @@
 
   @include vp-tablet {
     font-size: 20px;
+  }
+
+  @include vp-desktop {
+    margin-bottom: 8px;
+    font-size: 22px;
+    line-height: 22px;
   }
 }
 
@@ -143,6 +160,10 @@
 
   .features__item-text {
     padding: 0;
+
+    @include vp-tablet {
+      width: auto;
+    }
   }
 
   div {
@@ -157,6 +178,10 @@
     @include vp-tablet {
       margin-bottom: 25px;
     }
+
+    @include vp-desktop {
+      margin-bottom: 10px;
+    }
   }
 
   .features__item-title p {
@@ -169,6 +194,10 @@
       margin-bottom: 25px;
       font-size: 24px;
       line-height: 24px;
+    }
+
+    @include vp-desktop {
+      margin-bottom: 30px;
     }
   }
 
@@ -185,5 +214,7 @@
   @include vp-desktop {
     grid-column: 2/3;
     grid-row: span 2;
+    padding: 58px 40px;
+    width: 360px;
   }
 }
