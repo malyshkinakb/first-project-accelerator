@@ -1,7 +1,8 @@
 .price-card {
   background-color: $main-color-light;
-  padding: 50px 47px;
+  padding: 50px 40px;
   text-align: center;
+  border: 7px solid $main-color-light;
 
   @include vp-tablet {
     padding: 65px;
@@ -12,6 +13,17 @@
   @include vp-desktop {
     width: 360px;
     padding: 65px 78px;
+  }
+
+  &:hover {
+    border-image: linear-gradient(to right bottom, #d10a42, #00359f);
+    border-image-slice: 7;
+
+    .button--price {
+      border: none;
+      background: linear-gradient(97deg, #ed0233 17%, #003eb7 95%);
+      color: $main-color-light;
+    }
   }
 }
 
@@ -101,9 +113,3 @@
   }
 }
 
-.price-card__button {
-  display: block;
-  color: $main-color;
-  padding: 25px 0;
-  border: 2px solid #102654;
-}

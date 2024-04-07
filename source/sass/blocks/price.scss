@@ -1,6 +1,7 @@
 .price {
   background-color: $main-color-bg;
-  padding: 40px 0;
+  padding: 40px 0 33px;
+  z-index: 1;
 
   @include vp-tablet {
     padding: 60px 0;
@@ -9,6 +10,11 @@
   @include vp-desktop {
     padding: 100px 0;
   }
+}
+
+.price__wrapper {
+  position: relative;
+  z-index: 0;
 }
 
 .price__title {
@@ -29,7 +35,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 
   &::after {
     content: "";
@@ -54,8 +60,8 @@
 
 .price__tab {
   display: block;
-  color: $main-color;
-  opacity: 50%;
+  position: relative;
+  color: rgba(16, 38, 84, 0.5);
   background-color: transparent;
   border: none;
   font-size: 16px;
@@ -63,9 +69,41 @@
   padding: 0 0 16px;
   cursor: pointer;
 
-  .is-active {
-    opacity: 1;
-    border-bottom: 2px solid $accent-color;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+  }
+
+  &:focus {
+    color: $main-color;
+
+    &::after {
+      background-color: $main-color;
+    }
+  }
+
+  &:hover {
+    color: rgba(16, 38, 84, 0.7);
+
+    &::after {
+      background-color: #787878;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: #ed0233;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
   }
 
   @include vp-tablet {
@@ -80,13 +118,24 @@
   }
 }
 
+.price__tab.is-active::after {
+  opacity: 1;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #ed0233;
+}
+
 .price__list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 21px;
 
   @include vp-tablet {
     gap: 40px;
@@ -98,3 +147,22 @@
   }
 }
 
+.price__image {
+  display: none;
+
+  @include vp-tablet {
+    position: absolute;
+    bottom: -79px;
+    right: 0;
+    display: block;
+    z-index: -1;
+    width: 327px;
+    height: 423px;
+  }
+
+  @include vp-desktop {
+    width: 287px;
+    height: 494px;
+    bottom: -120px;
+  }
+}

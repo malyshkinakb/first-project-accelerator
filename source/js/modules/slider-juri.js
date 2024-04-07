@@ -1,7 +1,7 @@
 import {Swiper} from '../vendor/swiper';
 
 const initSliderJuri = () => {
-  const swiper = new Swiper('.juri__slider', {
+  new Swiper('.juri__slider', {
   // Optional parameters
     direction: 'horizontal',
     slidesPerView: 1,

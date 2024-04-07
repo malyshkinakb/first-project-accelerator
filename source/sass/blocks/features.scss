@@ -87,6 +87,9 @@
   font-weight: 700;
   font-size: 64px;
   line-height: 64px;
+  color: transparent;
+  background-image: linear-gradient(130deg, #d10a42, #0041ca 45%);
+  background-clip: text;
 
   @include vp-tablet {
     font-size: 70px;
@@ -151,12 +154,18 @@
 }
 
 .features__item--center {
-  margin: 5px 0 5px -15px;
-  width: 100vw;
-  max-width: 100vw;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
   background-color: $secondary-color;
   color: $main-color-light;
   padding: 30px 75px 40px;
+
+  @include vp-only-mobile {
+    margin: 5px 0 5px -15px;
+    width: 100vw;
+    max-width: 100vw;
+  }
 
   .features__item-text {
     padding: 0;
@@ -174,6 +183,8 @@
 
   .features__item-title strong {
     margin-bottom: 5px;
+    color: $main-color-light;
+    background-image: none;
 
     @include vp-tablet {
       margin-bottom: 25px;

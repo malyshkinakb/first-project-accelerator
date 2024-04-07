@@ -50,4 +50,37 @@
     width: 14px;
     height: 14px;
   }
+
+  &:focus {
+    background-color: #103aae;
+
+    &::before {
+      background-color: $main-color-light;
+    }
+  }
+
+  &:hover {
+    background-color: #74819c;
+
+    &::before {
+      background-color: $main-color-light;
+    }
+  }
+
+  &:active {
+    background-color: $main-color;
+
+    &::before {
+      background-color: $main-color-light;
+    }
+  }
+}
+
+.social-list__link[disabled] {
+  background-color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+
+  &::before {
+    background-color: #030a1a;
+  }
 }

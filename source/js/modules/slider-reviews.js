@@ -1,7 +1,7 @@
 import {Swiper} from '../vendor/swiper';
 
 const initSliderReviews = () => {
-  const swiper = new Swiper('.reviews__slider', {
+  new Swiper('.reviews__slider', {
     direction: 'horizontal',
     autoHeight: true,
     slidesPerView: 1,

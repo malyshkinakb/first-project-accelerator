@@ -17,8 +17,8 @@ const initTabsPrice = () => {
 
   function activeTab(tab) {
     if (!tab.classList.contains('is-active')) {
-      for (tab of tabs) {
-        tab.classList.remove('is-active');
+      for (const but of tabs) {
+        but.classList.remove('is-active');
       }
       tab.classList.add('is-active');
     }

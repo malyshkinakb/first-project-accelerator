@@ -1,12 +1,15 @@
 .main-offer {
-  margin: 0 0 40px -15px;
-  width: 100vw;
-  max-width: 100vw;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+
+  @include vp-only-mobile {
+    margin: 0 0 40px -15px;
+    width: 100vw;
+    max-width: 100vw;
+  }
 
   @include vp-tablet {
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
     display: flex;
     margin-bottom: 35px;
   }
@@ -91,4 +94,3 @@
     margin-bottom: 160px;
   }
 }
-

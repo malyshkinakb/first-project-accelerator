@@ -12,7 +12,7 @@ const createIframe = () => {
 
 const initVideo = () => {
   buttonVideo.addEventListener ('click', () => {
-    const iframe = createIframe();
+    createIframe();
   });
 };
 
